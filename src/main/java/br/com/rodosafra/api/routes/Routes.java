@@ -4,11 +4,20 @@ import java.util.List;
 
 public class Routes {
 
+    private String geometry;
     private List<Legs> legs;
     private String weight_name;
     private Double weight;
     private Double duration;
     private Double distance;
+
+    public String getGeometry() {
+        return geometry;
+    }
+
+    public void setGeometry(String geometry) {
+        this.geometry = geometry;
+    }
 
     public List<Legs> getLegs() {
         return legs;

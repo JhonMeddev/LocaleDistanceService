@@ -7,7 +7,7 @@ public class Waypoints {
     private String hint;
     private Double distance;
     private String name;
-    private List<Location> location;
+    private List<Double> location;
 
     public String getHint() {
         return hint;
@@ -33,11 +33,11 @@ public class Waypoints {
         this.name = name;
     }
 
-    public List<Location> getLocation() {
+    public List<Double> getLocation() {
         return location;
     }
 
-    public void setLocation(List<Location> location) {
+    public void setLocation(List<Double> location) {
         this.location = location;
     }
 }

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Legs {
 
-    private List steps;
+    private List<Double> steps;
     private String summary;
     private Double weight;
     private Double duration;
