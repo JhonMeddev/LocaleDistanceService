@@ -1,9 +1,7 @@
-package br.com.rodosafra.api;
+package br.com.rodosafra.client;
 
-import br.com.rodosafra.client.ILocaleDistance;
-import br.com.rodosafra.client.LocaleDistanceService;
+import br.com.rodosafra.api.LocaleDistance;
 
-import javax.validation.Validator;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -27,11 +25,11 @@ public class LocaleDistanceController {
 
 
     @GET
-    @Path("/rotas/{coordenadas}")
+    @Path("{coordenadas}")
     public String getEmployeeById(@PathParam("coordenadas") String coordenadas)
     {
         //Do not hard code in your application
-        WebTarget webTarget = client.target("http://localhost:8080/rotas/"+coordenadas);
+        WebTarget webTarget = client.target("https://router.project-osrm.org/route/v1/driving/"+coordenadas);
         Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
         Response response = invocationBuilder.get();
         LocaleDistance localeDistance = response.readEntity(LocaleDistance.class);
