@@ -1,7 +1,9 @@
+/home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/api/LocaleDistanceController.java
 /home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/api/LocaleDistance.java
 /home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/LocaleDistanceServiceApplication.java
 /home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/LocaleDistanceServiceConfiguration.java
 /home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/api/routes/Legs.java
-/home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/api/controller/LocaleDistanceController.java
+/home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/client/LocaleDistanceService.java
+/home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/client/ILocaleDistance.java
 /home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/api/routes/Routes.java
 /home/jhonmed/Área de Trabalho/Testes/LocaleDistanceService/src/main/java/br/com/rodosafra/api/waypoints/Waypoints.java

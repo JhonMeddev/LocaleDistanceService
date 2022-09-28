@@ -1,7 +1,9 @@
+br/com/rodosafra/client/LocaleDistanceService.class
+br/com/rodosafra/client/ILocaleDistance.class
 br/com/rodosafra/LocaleDistanceServiceConfiguration.class
 br/com/rodosafra/api/waypoints/Waypoints.class
+br/com/rodosafra/api/LocaleDistanceController.class
 br/com/rodosafra/api/LocaleDistance.class
 br/com/rodosafra/LocaleDistanceServiceApplication.class
-br/com/rodosafra/api/controller/LocaleDistanceController.class
 br/com/rodosafra/api/routes/Routes.class
 br/com/rodosafra/api/routes/Legs.class
