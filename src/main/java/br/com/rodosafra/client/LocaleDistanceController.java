@@ -1,18 +1,16 @@
 package br.com.rodosafra.client;
 
+import br.com.rodosafra.api.Coordenadas;
 import br.com.rodosafra.api.LocaleDistance;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/client/")
+//@Path("/client/")
 @Produces(MediaType.TEXT_PLAIN)
 public class LocaleDistanceController {
 
@@ -25,16 +23,22 @@ public class LocaleDistanceController {
 
 
     @GET
-    @Path("{coordenadas}")
-    public String getEmployeeById(@PathParam("coordenadas") String coordenadas)
+    @Path("/{co}")
+    public LocaleDistance getRotas(@PathParam("co") String co)
     {
         //Do not hard code in your application
-        WebTarget webTarget = client.target("https://router.project-osrm.org/route/v1/driving/"+coordenadas);
+        WebTarget webTarget = client.target("https://router.project-osrm.org/route/v1/driving/"+co);
         Invocation.Builder invocationBuilder =  webTarget.request(MediaType.APPLICATION_JSON);
         Response response = invocationBuilder.get();
         LocaleDistance localeDistance = response.readEntity(LocaleDistance.class);
-        return localeDistance.toString();
+        return localeDistance;
     }
 
-
+    @POST
+    //@Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Path("/hello-world/")
+    public LocaleDistance post(Coordenadas coordenadas) {
+      LocaleDistance localeDistance = getRotas(coordenadas.getN1()+";"+coordenadas.getN2());
+        return localeDistance;
+    }
 }
