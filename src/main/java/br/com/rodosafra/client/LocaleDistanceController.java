@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 //@Path("/client/")
-@Produces(MediaType.TEXT_PLAIN)
+@Produces(MediaType.APPLICATION_JSON)
 public class LocaleDistanceController {
 
     private Client client;
@@ -36,7 +36,7 @@ public class LocaleDistanceController {
 
     @POST
     //@Consumes(MediaType.MULTIPART_FORM_DATA)
-    @Path("/hello-world/")
+    @Path("/coordenadas/")
     public LocaleDistance post(Coordenadas coordenadas) {
       LocaleDistance localeDistance = getRotas(coordenadas.getN1()+";"+coordenadas.getN2());
         return localeDistance;
